@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ערכת מדיה — Adobe VisionLift</title>
+  <meta name="description" content="ערכת מדיה מהירה ל–Adobe VisionLift: נתונים, קהל יעד, ערוצי קשר וקישורים חמים לעבודות." />
+  <meta property="og:title" content="ערכת מדיה — Adobe VisionLift" />
+  <meta property="og:description" content="כל מה שצוות Adobe צריך: מספרים, קהל, טון־דיבור, וערוצי קשר לחסות." />
+  <meta property="og:type" content="article" />
+  <style>
+    :root {
+      --bg: #050716;
+      --panel: rgba(10, 14, 32, 0.9);
+      --accent1: #ff3366;
+      --accent2: #41e1ff;
+      --text: #f5f7ff;
+      --muted: #a6accc;
+      --radius: 18px;
+      --shadow: 0 18px 32px rgba(0, 0, 0, 0.48);
+      --border: rgba(255, 255, 255, 0.16);
+      --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+      --transition: 0.25s ease;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(255, 80, 180, 0.16) 0, transparent 45%),
+        radial-gradient(circle at 85% 0%, rgba(80, 200, 255, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(255, 180, 40, 0.18) 0, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 18px 64px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .nav a {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      font-weight: 600;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .nav a:hover {
+      background: linear-gradient(135deg, rgba(255, 51, 102, 0.18), rgba(65, 225, 255, 0.18));
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      border-radius: 22px;
+      padding: 22px 20px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(135deg, rgba(255, 51, 102, 0.18), rgba(65, 225, 255, 0.14)), linear-gradient(135deg, rgba(0, 0, 0, 0.88), rgba(5, 10, 35, 0.94));
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.3rem);
+    }
+
+    .hero p { margin: 0; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 14px 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h2 { margin: 0 0 6px; font-size: 1.1rem; }
+    .panel p { margin: 0 0 8px; color: var(--muted); }
+
+    .list { margin: 0; padding-right: 18px; color: var(--muted); }
+    .list li { margin-bottom: 6px; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+
+    .cta {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      font-weight: 700;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .cta:hover { background: rgba(255, 51, 102, 0.24); transform: translateY(-1px); }
+
+    footer { margin-top: 24px; color: var(--muted); text-align: center; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="index.html">חזרה למכתב הראשי</a>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <a href="vision.html">עמוד חזון</a>
+        <a href="activation-plan.html">תוכנית הפעלה</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <span class="badge">Media Kit Snapshot</span>
+      <h1>Adobe VisionLift — נתונים ומהירות</h1>
+      <p>
+        עמוד זריז עם כל מה שאתם צריכים כדי לשקול חסות: קהל, מדיה, לוחות זמנים, וערוצי קשר ישירים.
+      </p>
+    </header>
+
+    <section class="grid" style="margin-bottom:14px;">
+      <article class="panel">
+        <h2>קהל וקהילה</h2>
+        <ul class="list">
+          <li>חובבי קריאייטיב (מעצבים, מוזיקאים, וידאו) בגילאי 16–35.</li>
+          <li>קהילות דיסקורד ואינסטגרם עם פוסטים יומיים + סטוריז.</li>
+          <li>יוצרי אינדי שמחפשים workflow יעיל על בסיס Adobe.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>טון תקשורתי</h2>
+        <ul class="list">
+          <li>סופר־אנרגטי, ברור, מסביר מה קורה מאחורי הקלעים.</li>
+          <li>"Hands-on" — דוגמאות מסך מלא, קיצורי מקשים, טמפלטים.</li>
+          <li>גישה שקופה: מספרים, תובנות, וקריאה להצטרפות.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>מדיה ותוכן</h2>
+        <ul class="list">
+          <li>וידאו: YouTube + TikTok + Shorts — 2–3 בשבוע.</li>
+          <li>גרפיקה: סדרות קלפים, לוגואים, עמודי נחיתה, UI Kits.</li>
+          <li>מוזיקה: HolyTrap / CyberTrap להעצמת אנימציות וסיפורים.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <h2>ערוצים חמים</h2>
+      <p>
+        כל לינק ייחודי מסומן ב–UTM לחסות Adobe. התקשורת מרוכזת בערוצים הבאים:
+      </p>
+      <ul class="list">
+        <li>GitHub Pages — הדגמות, קבצי PSD/AE/Premiere לדוגמה.</li>
+        <li>YouTube — מדריכי Behind the Scenes כולל breakdown של timeline.</li>
+        <li>Instagram/TikTok — קליפים קצרים עם CTA להצטרפות לקהילה.</li>
+        <li>Discord — חדרי #made-with-adobe להצפת יצירות וfeedback.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="cta" href="index.html#contact">Contact + Email</a>
+        <a class="cta" href="vision.html#">Vision Deck</a>
+        <a class="cta" href="activation-plan.html#">Roadmap 90 יום</a>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <h2>נתונים מהירים</h2>
+      <div class="grid">
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>Reach משוער</h2>
+          <p>15–20K צפיות חודשיות מצרפיות (IG/TikTok/YT) עם קצב עלייה עקבי.</p>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>תדירות</h2>
+          <p>2–3 וידאו בשבוע + 4–6 גרפיקות/קלפים + stories יומיים.</p>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>Call to Action</h2>
+          <p>"Created with Adobe" + לינק חכם לחבילת CC + הזמנה לוובינר חודשי.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>פרטי קשר ממוקדים</h2>
+      <p>לקביעת שיחת חסות או הדגמה: adobe@sparking.vision · טלפון: 972-54-7779991</p>
+      <p>זמן תגובה: עד 24 שעות. ניתן לקבוע זום/Meet. הפניות יכנסו גם ל–CRM הקהילתי.</p>
+    </section>
+
+    <footer>
+      ערכת מדיה ל–Adobe VisionLift · נכתב ונערך על ידי לאון יעקובוב (AnLoMinus) · <a href="index.html">בחזרה לדף הראשי</a>
+    </footer>
+  </div>
+</body>
+</html>

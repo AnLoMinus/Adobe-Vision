@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>חזון Adobe VisionLift — קו על ואסטרטגיית חסות</title>
+  <meta name="description" content="מסמך חזון מלא ל–Adobe VisionLift: ערכים, בידול, תרומת Adobe לקהילה וצעדים מדורגים לשותפות." />
+  <meta property="og:title" content="חזון Adobe VisionLift" />
+  <meta property="og:description" content="עקרונות־על, בידול קהילתי ומפת־דרך לשותפות חסות עם Adobe." />
+  <meta property="og:type" content="article" />
+  <style>
+    :root {
+      --bg: #040512;
+      --panel: rgba(10, 14, 32, 0.92);
+      --accent1: #ff3b6a;
+      --accent2: #41e1ff;
+      --accent3: #ffb347;
+      --text: #f5f7ff;
+      --muted: #a6accc;
+      --radius: 18px;
+      --shadow: 0 18px 32px rgba(0, 0, 0, 0.48);
+      --border: rgba(255, 255, 255, 0.16);
+      --transition: 0.25s ease;
+      --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 80, 180, 0.16) 0, transparent 45%),
+        radial-gradient(circle at 90% 0%, rgba(80, 200, 255, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(255, 180, 40, 0.18) 0, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 18px 64px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .nav a,
+    .nav button {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .nav a:hover,
+    .nav button:hover {
+      background: linear-gradient(135deg, rgba(255, 59, 106, 0.18), rgba(65, 225, 255, 0.18));
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(255, 59, 106, 0.18), rgba(65, 225, 255, 0.14)),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(5, 10, 35, 0.94));
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      padding: 22px 20px 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.88rem;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 14px 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    .panel p {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 0;
+      padding-right: 18px;
+      color: var(--muted);
+    }
+
+    .list li {
+      margin-bottom: 6px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 12px;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="index.html">חזרה למכתב הראשי</a>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <a href="media-kit.html">ערכת מדיה</a>
+        <a href="activation-plan.html">תוכנית הפעלה</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="pill">Adobe VisionLift — מסמך חזון</div>
+      <h1>חסות חכמה שמאירה קהילה עולמית</h1>
+      <p>
+        המסמך מרחיב את ההצעה שבדף הראשי: ערכי העל, למה Adobe היא הלב הטכנולוגי של היצירה,
+        ואיך נבנה מהלך שיווקי ותוכני בשלבים.
+      </p>
+    </header>
+
+    <section class="two-col" style="margin-bottom:16px;">
+      <div class="panel">
+        <span class="label">ערכי ליבה</span>
+        <h2>יצירתיות כאור • אמון כמצפן • קהילה ככוח</h2>
+        <p>
+          שלושת הערכים האלה מכוונים כל מוצר, וידאו, או סדרת תוכן.
+          Adobe מעניקה את השפה והכלים; אני מוסיף את ה–Spark שמדליק את הדמיון אצל יוצרי העל בקהילה.
+        </p>
+      </div>
+      <div class="panel">
+        <span class="label">בידול</span>
+        <h2>Adobe בתור שותפת־אצווה, לא רק כלי</h2>
+        <p>
+          שימוש יומיומי בכלי Adobe הופך לנרטיב: "היצירה נולדה ב–Photoshop, זזה ב–After Effects, נשמעה דרך Audition".
+          בכל סרטון והדרכה נדגיש את שרשרת הערך שלכם.
+        </p>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <span class="label">מסלול שלבים</span>
+      <h2>90 יום של הישגים מדידים</h2>
+      <div class="grid">
+        <div class="panel" style="background: rgba(255,255,255,0.03);">
+          <h2>חודש 1 — הדלקה</h2>
+          <ul class="list">
+            <li>5 סרטוני "מאחורי הקלעים" המדגימים תהליכי Adobe.</li>
+            <li>15 עיצובים גרפיים שמבליטים את הלוגו "Created with Adobe".</li>
+            <li>דף נחיתה לקהילה + טופס הצטרפות עם UTM שמוקצה לחסות.</li>
+          </ul>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.03);">
+          <h2>חודש 2 — זרקור</h2>
+          <ul class="list">
+            <li>וובינר לייב על תהליכי Photoshop + Premiere עם  Q&A.</li>
+            <li>שיתוף פעולה עם 2 אמנים צעירים — Adobe כמאיץ ראשון שלהם.</li>
+            <li>מדידה: צפיות, זמן מסך, לידים למנוי CC (KPIs משותפים).</li>
+          </ul>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.03);">
+          <h2>חודש 3 — קהילה</h2>
+          <ul class="list">
+            <li>השקת "Creative Sparks" — מיני קורס בהשראת Adobe Express.</li>
+            <li>אירוע קהילתי (פיזי/זום) עם הדגמת תוצרים חיים.</li>
+            <li>דוח מסכם עם תובנות, לקחים ויוזמות המשך.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <span class="label">תרומת Adobe</span>
+      <h2>מה Adobe מקבלת בכל שלב</h2>
+      <div class="two-col">
+        <div class="panel" style="background: rgba(255, 255, 255, 0.03);">
+          <h2>נראות</h2>
+          <ul class="list">
+            <li>קרדיט Adobe בפתיח ובסיום של כל וידאו.</li>
+            <li>שימוש עקבי ב"Created with Adobe" בגרפיקות, קלפים וסדרות.</li>
+            <li>מדיה חברתית: Instagram, TikTok, YouTube, GitHub Pages.</li>
+          </ul>
+        </div>
+        <div class="panel" style="background: rgba(255, 255, 255, 0.03);">
+          <h2>המרה</h2>
+          <ul class="list">
+            <li>UTM מותאם לדפי הרשמה + חבילת CC מדידה.</li>
+            <li>הטמעת CTA ברורה בכל עמוד נחיתה וקובץ PDF.</li>
+            <li>סקר קהילה להדגשת השפעת Adobe על השגרה היצירתית.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <span class="label">DNA קהילתי</span>
+      <h2>הבטחת חוויית משתמש לכוכבי היצירה</h2>
+      <p>
+        הקהל שלי כולל מעצבים, מוזיקאים, יוצרי אינדי וגיימרים. כולם מחפשים "ניצוץ" מהיר שמציג להם
+        איך Adobe חוסכת זמן ומרימה את הרמה האמנותית. בכל מדריך נדגיש את:
+      </p>
+      <ul class="list">
+        <li>Templates של Adobe Express שמקצרים הפקות.</li>
+        <li>Workflow של Photoshop → After Effects → Premiere Pro.</li>
+        <li>טיפים לשמירה על איכות שמע ב–Audition + אינטגרציית Speech to Text.</li>
+      </ul>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <span class="label">מדדים & שקיפות</span>
+      <h2>דוח חודשי לאנשי Adobe</h2>
+      <div class="grid">
+        <div class="panel" style="background: rgba(255, 255, 255, 0.03);">
+          <h2>KPIs</h2>
+          <ul class="list">
+            <li>Reach (IG/TikTok/YouTube) + זמן צפייה.</li>
+            <li>מספר קבצי "Created with Adobe" שפורסמו.</li>
+            <li>מספר נרשמים או פניות לחבילת CC דרך קישורי UTM.</li>
+          </ul>
+        </div>
+        <div class="panel" style="background: rgba(255, 255, 255, 0.03);">
+          <h2>Delivery</h2>
+          <ul class="list">
+            <li>דו"ח PDF חודשי + דוח מקוצר במייל.</li>
+            <li>תיקייה חיה ב–GitHub Pages עם כל היצירות והוויזואלים.</li>
+            <li>הצעת A/B testing לתבניות עיצוב חדשות.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <span class="label">סיכום</span>
+      <h2>Adobe + VisionLift = שותפות שמדליקה ניצוצות</h2>
+      <p>
+        החזון כאן מראה את השרשרת המלאה: הרעיון, הכלי, השיתוף, הקהילה. אני מביא את האנרגיה והמסה הקריאטיבית;
+        אתם מביאים את פלטפורמת־העל שמאפשרת לה להתגשם. יחד נוצר סיפור הדגמה מושלם ל–Creative Cloud.
+      </p>
+    </section>
+
+    <footer>
+      נכתב ונערך על ידי לאון יעקובוב (AnLoMinus) · מסמך חזון משלים ל–Adobe VisionLift · <a href="index.html">חזרה לדף הראשי</a>
+    </footer>
+  </div>
+</body>
+</html>

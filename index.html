@@ -121,6 +121,61 @@
       transform: translateY(-1px);
     }
 
+    /* Resource grid */
+    .resource-section {
+      margin: 0 0 32px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .resource-card {
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .resource-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.32);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+    }
+
+    .resource-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .resource-card p {
+      margin: 0 0 12px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .resource-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .resource-chip {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
     /* Hero */
     .hero {
       border-radius: var(--radius-xl);
@@ -519,6 +574,7 @@
         <button class="nav-link" data-scroll="#adobe-tools">כלי Adobe</button>
         <button class="nav-link" data-scroll="#contact">קשר עם Adobe</button>
         <button class="nav-link" data-scroll="#why">למה זה משתלם</button>
+        <button class="nav-link" data-scroll="#resources">עמודי המשך</button>
         <button class="nav-link" data-scroll="#footer">קרדיטים</button>
       </nav>
     </header>
@@ -544,6 +600,56 @@
         <div class="hero-cta-row">
           <a href="#letter" class="btn-primary">📜 מעבר למכתב המלא</a>
           <a href="#adobe-tools" class="btn-ghost">🎨 רשת לינקים לכלי Adobe</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="resource-section">
+      <div class="cards">
+        <div class="card">
+          <div class="card-heading">
+            <div>
+              <div class="pill-title">עמודי המשך והעמקה</div>
+              <h2 class="card-title">קפיצה לעוד תוכן מוכוון Adobe</h2>
+              <p class="card-sub">חומרים דיגיטליים המפרטים את מסלול ההשקה, הקהילה והמדיה של Adobe VisionLift.</p>
+            </div>
+            <span class="badge">New</span>
+          </div>
+
+          <div class="resource-grid">
+            <article class="resource-card">
+              <h3>חזון וערכי־על</h3>
+              <p>
+                הצעה אסטרטגית מלאה: ערכי הליבה, הבידול, תרומת Adobe למאות יוצרי קהילה ומהלך ההשקה המדורג.
+              </p>
+              <div class="resource-actions">
+                <a class="btn-primary" href="vision.html">פתחו את עמוד החזון</a>
+                <span class="resource-chip">Adobe VisionLift</span>
+              </div>
+            </article>
+
+            <article class="resource-card">
+              <h3>ערכת מדיה ומשאבים</h3>
+              <p>
+                תקציר מהיר למקבלי החלטות: מספרים, קהל, טון־דיבור, ערוצי קשר ולינקים חמים לתיקי העבודות.
+              </p>
+              <div class="resource-actions">
+                <a class="btn-primary" href="media-kit.html">לערכת המדיה</a>
+                <span class="resource-chip">Media | Social</span>
+              </div>
+            </article>
+
+            <article class="resource-card">
+              <h3>תוכנית הפעלה וקהילה</h3>
+              <p>
+                יעדי 90 יום: מפת דרכים לאירועים, וובינרים, שיתופי פעולה, וחשיפת חוויית "Created with Adobe".
+              </p>
+              <div class="resource-actions">
+                <a class="btn-primary" href="activation-plan.html">לתוכנית המלאה</a>
+                <span class="resource-chip">Roadmap</span>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>

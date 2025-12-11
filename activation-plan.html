@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>תוכנית הפעלה — Adobe VisionLift</title>
+  <meta name="description" content="תוכנית הפעלה ל–Adobe VisionLift: אירועים, וובינרים, יעדי 90 יום, ומדדים משותפים עם Adobe." />
+  <meta property="og:title" content="תוכנית הפעלה — Adobe VisionLift" />
+  <meta property="og:description" content="מפת־דרך תלת חודשית עם אירועים, וובינרים ופעילות קהילה תחת חסות Adobe." />
+  <meta property="og:type" content="article" />
+  <style>
+    :root {
+      --bg: #06081c;
+      --panel: rgba(10, 14, 32, 0.94);
+      --accent1: #ff3b6a;
+      --accent2: #41e1ff;
+      --accent3: #ffb347;
+      --text: #f5f7ff;
+      --muted: #a6accc;
+      --radius: 18px;
+      --shadow: 0 18px 32px rgba(0, 0, 0, 0.5);
+      --border: rgba(255, 255, 255, 0.16);
+      --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+      --transition: 0.25s ease;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255, 80, 180, 0.16) 0, transparent 45%),
+        radial-gradient(circle at 88% 0%, rgba(80, 200, 255, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(255, 180, 40, 0.18) 0, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 64px; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .nav a { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,0.06); color: var(--text); font-weight: 600; transition: background var(--transition), border-color var(--transition), transform var(--transition); }
+    .nav a:hover { background: linear-gradient(135deg, rgba(255,59,106,0.18), rgba(65,225,255,0.18)); border-color: rgba(255,255,255,0.28); transform: translateY(-1px); }
+
+    .hero { border-radius: 22px; padding: 22px 20px 16px; border: 1px solid rgba(255,255,255,0.2); background: linear-gradient(135deg, rgba(255,59,106,0.18), rgba(65,225,255,0.14)), linear-gradient(135deg, rgba(0,0,0,0.9), rgba(5,10,35,0.94)); box-shadow: var(--shadow); margin-bottom: 18px; }
+    .hero h1 { margin: 0 0 8px; font-size: clamp(1.8rem, 4vw, 2.35rem); }
+    .hero p { margin: 0; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 14px 12px; box-shadow: var(--shadow); }
+    .panel h2 { margin: 0 0 6px; font-size: 1.1rem; }
+    .panel p { margin: 0 0 8px; color: var(--muted); }
+    .list { margin: 0; padding-right: 18px; color: var(--muted); }
+    .list li { margin-bottom: 6px; }
+
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+
+    .timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+
+    .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+    .cta { padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.24); background: rgba(255, 255, 255, 0.08); color: var(--text); font-weight: 700; transition: background var(--transition), transform var(--transition); }
+    .cta:hover { background: rgba(255, 51, 102, 0.24); transform: translateY(-1px); }
+
+    footer { margin-top: 24px; color: var(--muted); text-align: center; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="index.html">חזרה למכתב הראשי</a>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <a href="vision.html">עמוד חזון</a>
+        <a href="media-kit.html">ערכת מדיה</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <span class="badge">Roadmap 90 יום</span>
+      <h1>תוכנית הפעלה וקהילה — Adobe VisionLift</h1>
+      <p>מפת דרך תלת־חודשית שממקסמת חשיפה ל–Adobe, מפיקה מדיה איכותית, ומחברת קהילה פעילה.</p>
+    </header>
+
+    <section class="timeline" style="margin-bottom:14px;">
+      <article class="panel">
+        <h2>שבועות 1–4 — Kickoff</h2>
+        <ul class="list">
+          <li>הקמת עמוד נחיתה עם CTA "Created with Adobe" + טופס הצטרפות.</li>
+          <li>הפקת 5 סרטוני מאחורי הקלעים: Photoshop → AE → Premiere.</li>
+          <li>שליחת ניוזלטר פתיחה + דוח בסיס לקהל.</li>
+          <li>Live קצר (YouTube/TikTok) עם שאלות קהילה על התהליכים.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>שבועות 5–8 — Spotlight</h2>
+        <ul class="list">
+          <li>וובינר Adobe Express + Illustrator ליצירת טמפלטים מהירים.</li>
+          <li>שיתופי פעולה עם 2 אמנים צעירים — Adobe כמאיץ.</li>
+          <li>מדידה: צפיות, זמן מסך, קצב הרשמה דרך UTM.</li>
+          <li>הוצאה לאור של 10 גרפיקות "Created with Adobe".</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>שבועות 9–12 — Community</h2>
+        <ul class="list">
+          <li>אירוע Live מסכם + השקת מיני קורס "Creative Sparks".</li>
+          <li>סקר שביעות רצון + הצעות פיצ'רים/שיתופים עתידיים.</li>
+          <li>דוח KPI מסכם לאנשי Adobe + הצעות A/B לקמפיין הבא.</li>
+          <li>ניהול Discord: חדרי feedback + תחרויות קצרות.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <h2>אירועים ופורמטים</h2>
+      <div class="grid">
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>Live & Webinar</h2>
+          <ul class="list">
+            <li>Monthly Live: breakdown של פרויקט מלא ב–After Effects + Premiere.</li>
+            <li>Office Hours: 30 דקות Q&A על Photoshop ו–Illustrator.</li>
+            <li>Session עם Adobe Express: שדרוג מהיר של תבניות לקהילה.</li>
+          </ul>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>Content Drops</h2>
+          <ul class="list">
+            <li>חבילת PSD/AE פתוחה לקהילה להשראה.</li>
+            <li>"Before/After" גרפי עם סימון "Made with Adobe".</li>
+            <li>Looper מוזיקלי המקושר ל–Premiere/AE לסינכרון וידאו.</li>
+          </ul>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>Community</h2>
+          <ul class="list">
+            <li>שרת Discord: חדרי #made-with-adobe ו–#workflow-tips.</li>
+            <li>תחרויות מיני: 48h challenge סביב Photoshop/Express.</li>
+            <li>פינת Mentorship לאמנים צעירים עם הצגת Adobe כשותף.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-bottom:14px;">
+      <h2>מדדים ו–Deliverables</h2>
+      <div class="grid">
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>KPIs</h2>
+          <ul class="list">
+            <li>Reach חודשי מצרפי + זמן צפייה.</li>
+            <li>הורדות של קבצי "Created with Adobe".</li>
+            <li>מספר נרשמים דרך קישורי UTM/QR לחבילת CC.</li>
+          </ul>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.04);">
+          <h2>Delivery</h2>
+          <ul class="list">
+            <li>דו"ח PDF חודשי + דוח קצר במייל.</li>
+            <li>ספריית GitHub Pages עם כל התוצרים (וידאו, PSD, טמפלטים).</li>
+            <li>הצעת A/B Testing לקמפיין הבא.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>קריאה לפעולה</h2>
+      <p>אם זה מדבר אליכם, בואו ננעל תאריך לייב משותף ונצא לדרך. כל הפעולות מסונכרנות ל–KPIs שחשובים לכם.</p>
+      <div class="cta-row">
+        <a class="cta" href="index.html#contact">דוא"ל וקשר</a>
+        <a class="cta" href="media-kit.html">ערכת מדיה</a>
+        <a class="cta" href="vision.html">מסמך חזון</a>
+      </div>
+    </section>
+
+    <footer>
+      תוכנית הפעלה ל–Adobe VisionLift · נכתב ונערך על ידי לאון יעקובוב (AnLoMinus) · <a href="index.html">חזרה לדף הראשי</a>
+    </footer>
+  </div>
+</body>
+</html>
