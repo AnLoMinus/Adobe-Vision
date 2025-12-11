@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מכתב חסות לאדובי — Adobe VisionLift (AV)</title>
+  <meta name="description" content="מכתב חסות רשמי לאדובי מטעם Leon Yaakobov (AnLoMinus) — SparKing Vision Creator." />
+  <style>
+    :root {
+      --bg-main: #050716;
+      --bg-card: rgba(12, 16, 40, 0.96);
+      --accent1: #ff3366;
+      --accent2: #ffb347;
+      --accent3: #41e1ff;
+      --text-main: #f5f7ff;
+      --text-muted: #a6accc;
+      --border-soft: rgba(255, 255, 255, 0.12);
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.5);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 0.25s ease-out;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 80, 180, 0.16) 0, transparent 45%),
+        radial-gradient(circle at 90% 0%, rgba(80, 200, 255, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(255, 180, 40, 0.18) 0, transparent 55%),
+        var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent3);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 18px 56px;
+    }
+
+    /* Top Nav */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spark-pill {
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      cursor: pointer;
+      background: rgba(5, 8, 25, 0.8);
+      backdrop-filter: blur(10px);
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.4);
+      background: linear-gradient(135deg, rgba(255, 51, 102, 0.18), rgba(65, 225, 255, 0.18));
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      border-radius: var(--radius-xl);
+      padding: 26px 22px 22px;
+      background:
+        linear-gradient(135deg, rgba(255, 51, 102, 0.18), rgba(65, 225, 255, 0.12)),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(5, 10, 35, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 26px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      opacity: 0.18;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255,255,255,0.45) 0, transparent 50%),
+        radial-gradient(circle at 80% 100%, rgba(255,255,255,0.25) 0, transparent 55%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(14px);
+      margin-bottom: 10px;
+    }
+
+    .hero-badge span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+      margin: 0 0 4px;
+    }
+
+    .hero-sub {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta span {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(5, 10, 35, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: var(--radius-pill);
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #0b0712;
+      font-weight: 600;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(7, 10, 30, 0.9);
+      color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      color: var(--text-main);
+      background: rgba(15, 20, 55, 0.95);
+      transform: translateY(-1px);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 24px;
+    }
+
+    .section-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      padding: 18px 18px 16px;
+      background: radial-gradient(circle at 0 0, rgba(255,255,255,0.06) 0, transparent 55%), rgba(6, 8, 30, 0.92);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    .section-title {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-sub {
+      margin: 0 0 14px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    @media (min-width: 720px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .tool-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 12px 12px 10px;
+      background: linear-gradient(135deg, rgba(15, 20, 50, 0.98), rgba(6, 8, 26, 0.96));
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .tool-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.7);
+      border-color: rgba(255, 255, 255, 0.5);
+      background: linear-gradient(135deg, rgba(40, 32, 80, 0.98), rgba(10, 18, 44, 0.96));
+    }
+
+    .tool-name {
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .tool-tag {
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--text-muted);
+    }
+
+    .tool-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .tool-link {
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tool-link span {
+      font-size: 0.9em;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .pill {
+      font-size: 0.74rem;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: var(--text-muted);
+      background: rgba(5, 8, 25, 0.9);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-item {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 10px 12px;
+      background: rgba(4, 6, 20, 0.95);
+      font-size: 0.88rem;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .key-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .key-points li {
+      margin-bottom: 6px;
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    .key-points li span.icon {
+      font-size: 1rem;
+      margin-top: 1px;
+    }
+
+    .letter-body {
+      font-size: 0.94rem;
+    }
+
+    .letter-body p {
+      margin: 0 0 10px;
+    }
+
+    .letter-sign {
+      margin-top: 12px;
+    }
+
+    .letter-sign strong {
+      display: block;
+    }
+
+    .hashtags {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      word-break: break-word;
+    }
+
+    .footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    @media (min-width: 760px) {
+      .footer-grid {
+        grid-template-columns: 2fr 2fr;
+      }
+    }
+
+    .credits-list {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+    }
+
+    .credits-list li {
+      margin-bottom: 3px;
+    }
+
+    .ltr {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
+      font-family: "SF Mono", Menlo, Consolas, "Roboto Mono", monospace;
+      font-size: 0.8rem;
+    }
+
+    .verse {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #f7e1a0;
+    }
+
+    .rap-block {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+      background: rgba(12, 10, 32, 0.9);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .metrics {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .copy-btn {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(5, 8, 25, 0.9);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+      margin-top: 6px;
+    }
+
+    .copy-btn:hover {
+      background: rgba(20, 26, 60, 0.98);
+      color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 20px 16px 18px;
+      }
+      .section-card {
+        padding: 14px 12px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Top Nav -->
+    <header class="top-nav">
+      <div class="brand">
+        <div class="brand-title">
+          AnLoMinus · SparKing
+          <span class="spark-pill">Adobe VisionLift (AV)</span>
+        </div>
+        <div class="brand-sub">
+          לאון יעקובוב — SparKing Vision Creator 🔥🎨
+        </div>
+      </div>
+      <nav class="nav-links">
+        <button class="nav-link" data-scroll="#letter">המכתב</button>
+        <button class="nav-link" data-scroll="#adobe-tools">כלי Adobe</button>
+        <button class="nav-link" data-scroll="#contact">קשר עם Adobe</button>
+        <button class="nav-link" data-scroll="#why">למה זה משתלם</button>
+        <button class="nav-link" data-scroll="#footer">קרדיטים</button>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-badge">
+          ✨ בקשת חסות רשמית
+          <span>Adobe Creative Cloud × AnLoMinus</span>
+        </div>
+        <h1 class="hero-title">
+          מכתב חסות לאדובי — Adobe VisionLift (AV)
+        </h1>
+        <p class="hero-sub">
+          שיתוף פעולה אסטרטגי בין Adobe לבין עולמות היצירה של AnLoMinus — גרפיקה, מוזיקה, וידאו, קלפים ועולמות SparKing הולוגרמיים.
+        </p>
+        <div class="hero-meta">
+          <span>📅 תאריך: יום חמישי, 11 בדצמבר 2025 / כ״א בכסלו תשפ״ו</span>
+          <span>⏰ שעה: 10:26 (UTC+2)</span>
+          <span>📌 מיקום: ישראל — יצירה לעולם כולו</span>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#letter" class="btn-primary">📜 מעבר למכתב המלא</a>
+          <a href="#adobe-tools" class="btn-ghost">🎨 רשת לינקים לכלי Adobe</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Letter Body -->
+    <section id="letter">
+      <div class="section-card">
+        <h2 class="section-title">📜 גוף המכתב הרשמי</h2>
+        <p class="section-sub">
+          נוסח מוכן לשליחה לאדובי דרך מייל / טופס / דף קשר — בצירוף רשת הלינקים המלאה שמופיעה בהמשך העמוד.
+        </p>
+
+        <div class="letter-body">
+          <p>שלום רב לצוות המדהים של <strong>Adobe</strong> 🎨⚡</p>
+
+          <p>
+            שמי <strong>לאון יעקובוב (AnLoMinus)</strong>, יוצר, מעצב, מוזיקאי ומפתח עולמות קריאייטיב מתקדמים. בשנים האחרונות אני בונה
+            מערכת של מאות פרויקטים חיים — החל מסדרות קלפים הולוגרמיות ומותגים משפחתיים, דרך לוגואים ותמונות על, ועד עולמות
+            מוזיקה ו־HolyTrap קוסמי.
+          </p>
+
+          <p>
+            כל היצירה הזו נשענת יום־יום על הכלים של Adobe: Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Audition,
+            Adobe Express וכלי Substance. עבורי, Adobe היא לא רק סט תוכנות — היא מנוע־על שמאפשר להוריד חזון קריאייטיבי מהדמיון
+            אל המציאות.
+          </p>
+
+          <p>
+            לפיכך, ברצוני לפתוח <strong>שיתוף פעולה רשמי בצורת חסות / Sponsorship</strong> בין Adobe לביני, שיבסס את Adobe כשותפה
+            אסטרטגית לעולמות שאני בונה, ויעניק לקהילות היוצרים סביבי השראה ודרך עבודה ברורה.
+          </p>
+
+          <h3 style="margin: 12px 0 6px; font-size: 1rem;">🎯 מה אני מבקש במסגרת החסות</h3>
+          <ul class="key-points">
+            <li><span class="icon">✅</span><span>חסות מלאה או חלקית על חבילת <strong>Adobe Creative Cloud</strong>.</span></li>
+            <li><span class="icon">✅</span><span>שיתוף פעולה מקצועי בפרויקטי־דגל (גרפיקה, וידאו, מוזיקה, קלפים, אנימציה).</span></li>
+            <li><span class="icon">✅</span><span>אפשרות לייצר תכנים רשמיים המדגימים תהליכי עבודה עם Adobe ליוצרים נוספים.</span></li>
+            <li><span class="icon">✅</span><span>ליווי והכרה בפרויקטים הבאים: SparKing Ascension, Nesle Family Universe, HacKing-DJ HolyTrap Universe, SparkCards &amp; Realms, MotionCraft.</span></li>
+          </ul>
+
+          <h3 style="margin: 12px 0 6px; font-size: 1rem;">🌟 מה Adobe מקבלת מהחיבור הזה</h3>
+          <ul class="key-points">
+            <li><span class="icon">🚀</span><span>חשיפה יציבה ורציפה לכלי Adobe בכל יצירה — תמונות, קלפים, סרטונים, לייבים ומוזיקה.</span></li>
+            <li><span class="icon">🚀</span><span>הצגת <strong>“Created with Adobe Tools”</strong> בכל פרויקט מרכזי ובתכנים חינוכיים.</span></li>
+            <li><span class="icon">🚀</span><span>קידום Adobe בקהילות של יוצרים, מוזיקאים, גיימרים ומעצבים — בישראל ובעולם.</span></li>
+            <li><span class="icon">🚀</span><span>שילוב לוגו Adobe ושם המותג בתיעוד תהליכי העבודה, קייס סטאדיז ו־Behind the Scenes.</span></li>
+          </ul>
+
+          <h3 style="margin: 12px 0 6px; font-size: 1rem;">📦 הצעה ראשונית למסגרת שותפות</h3>
+          <div style="overflow-x:auto;">
+            <table class="ltr" style="width:100%; border-collapse: collapse; margin-bottom:10px;">
+              <thead>
+                <tr style="background:rgba(255,255,255,0.05);">
+                  <th style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.18); text-align:right;">רכיב</th>
+                  <th style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.18); text-align:right;">תיאור</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.12);">🎁 חסות תוכנה</td>
+                  <td style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.12);">חבילת Adobe Creative Cloud מלאה לתקופה של 12 חודשים.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.12);">🎥 תוכן וידאו</td>
+                  <td style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.12);">5 סרטונים המוקדשים ל"הכוח של Adobe ביצירה" — תהליכים ומדריכים.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.12);">🎨 עבודות הדגמה</td>
+                  <td style="padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.12);">לפחות 20 עבודות גרפיות וסטים של קלפים/כריכות שנבנות עם Adobe בלבד.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 8px;">📣 קמפיין חשיפה</td>
+                  <td style="padding:6px 8px;">קמפיין הפצה ברשתות + GitHub Pages המציג את Adobe כשותף מרכזי.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="letter-sign">
+            <p>
+              תודה על הזמן, על ההקשבה ועל ההשראה המתמשכת שהכלים שלכם נותנים לי וליוצרים ברחבי העולם.
+            </p>
+            <p>
+              מחכה לחיבור בינינו ולבניית שותפות שמרוממת את עולם היצירה הדיגיטלית.
+            </p>
+            <p>
+              בברכה,<br />
+              <strong>לאון יעקובוב | AnLoMinus – SparKing Vision Creator</strong><br />
+              יוצר עולמות גרפיים, מוזיקליים והולוגרמיים — בעזרת Adobe Creative Cloud.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adobe Tools Network -->
+    <section id="adobe-tools">
+      <div class="section-card">
+        <h2 class="section-title">🎨 רשת לינקים אורגנית — כלי Adobe</h2>
+        <p class="section-sub">
+          קישורים רשמיים לכלי Adobe המוזכרים במכתב — לצפייה מהירה בתוכנות המרכזיות שמשמשות ליצירה היומיומית.
+        </p>
+
+        <div class="grid grid-3">
+          <!-- Graphics -->
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>Photoshop</span>
+              <span class="tool-tag">עריכת תמונה</span>
+            </div>
+            <p class="tool-desc">
+              כלי הדגל לעריכת תמונות, קומפוזיציות, עיצוב קאברים ויצירת עולמות ויזואליים הולוגרמיים.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/products/photoshop.html
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Cover Art</span>
+              <span class="pill">Retouch</span>
+              <span class="pill">SparKing Visuals</span>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>Illustrator</span>
+              <span class="tool-tag">וקטור &amp; לוגואים</span>
+            </div>
+            <p class="tool-desc">
+              לוגואים, אייקונים, קלפי־כוח וגרפיקות נקיות לסדרות SparDeck ו־HacKing-DJ.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/products/illustrator.html" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/products/illustrator.html
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Logos</span>
+              <span class="pill">Icons</span>
+              <span class="pill">Card Frames</span>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>InDesign</span>
+              <span class="tool-tag">חוברות &amp; ספרונים</span>
+            </div>
+            <p class="tool-desc">
+              בניית חוברות, חוברות כיס, ספרוני משחק וכל מערכות SparKing כפרינט מקצועי.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/products/indesign.html" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/products/indesign.html
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Booklets</span>
+              <span class="pill">Print</span>
+              <span class="pill">Game Manuals</span>
+            </div>
+          </article>
+
+          <!-- Video & Audio -->
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>Premiere Pro</span>
+              <span class="tool-tag">עריכת וידאו</span>
+            </div>
+            <p class="tool-desc">
+              קליפים, טיזרים, סרטוני תדמית ועריכות ל־HacKing-DJ ו־MotionCraft.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/products/premiere.html" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/products/premiere.html
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Music Videos</span>
+              <span class="pill">Teasers</span>
+              <span class="pill">YouTube Edits</span>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>After Effects</span>
+              <span class="tool-tag">VFX &amp; Motion</span>
+            </div>
+            <p class="tool-desc">
+              אנימציות קלפים, אינטרואים, חיתוכי אנרגיה וברקים עבור SparKing ו־Holy Voltage.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/products/aftereffects.html
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Motion Graphics</span>
+              <span class="pill">Energy FX</span>
+              <span class="pill">Logo Animations</span>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>Audition</span>
+              <span class="tool-tag">אודיו &amp; מיקס</span>
+            </div>
+            <p class="tool-desc">
+              עריכת סאונד, מיקס, תיקוני קול ו־FX עבור שירי HacKing-DJ וסינגלי SparKing.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/products/audition.html" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/products/audition.html
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Sound Design</span>
+              <span class="pill">Mix</span>
+              <span class="pill">Podcast / Voice</span>
+            </div>
+          </article>
+
+          <!-- Express & Substance -->
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>Adobe Express</span>
+              <span class="tool-tag">תכנים מהירים</span>
+            </div>
+            <p class="tool-desc">
+              פוסטים, סטוריז ותמונות מהירות להפצה של המותגים SparKing, Nesle, HacKing-DJ ועוד.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/express/" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/express/
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Social Posts</span>
+              <span class="pill">Stories</span>
+              <span class="pill">Quick Flyers</span>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-name">
+              <span>Substance 3D Tools</span>
+              <span class="tool-tag">חומרים &amp; 3D</span>
+            </div>
+            <p class="tool-desc">
+              טקסטורות מתכת, הולוגרמה וזוהר לקלפים, אובייקטים תלת־ממדיים ולוגואים קוסמיים.
+            </p>
+            <div class="tool-link">
+              <span>🔗</span>
+              <a href="https://www.adobe.com/products/substance3d-painter.html" target="_blank" rel="noopener noreferrer" class="ltr">
+                https://www.adobe.com/products/substance3d-painter.html
+              </a>
+            </div>
+            <div class="pill-row">
+              <span class="pill">3D Materials</span>
+              <span class="pill">Hologram FX</span>
+              <span class="pill">Card Surfaces</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adobe Contact -->
+    <section id="contact">
+      <div class="section-card">
+        <h2 class="section-title">📮 יצירת קשר עם Adobe</h2>
+        <p class="section-sub">
+          שערים רשמיים ליצירת קשר עם Adobe — עסקים, תמיכה, ותוכניות שותפים. אפשר לצרף אותם במייל / בטופס הפנייה.
+        </p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <strong>Adobe Business Contact — קשר עסקי</strong>
+            <div class="ltr">
+              <a href="https://www.adobe.com/contact/business.html" target="_blank" rel="noopener noreferrer">
+                https://www.adobe.com/contact/business.html
+              </a>
+            </div>
+            <p>ערוץ לשיתופי פעולה עסקיים, חסויות ותוכניות Enterprise.</p>
+          </div>
+
+          <div class="contact-item">
+            <strong>Adobe Support — תמיכה ויצירת קשר כללי</strong>
+            <div class="ltr">
+              <a href="https://helpx.adobe.com/contact.html" target="_blank" rel="noopener noreferrer">
+                https://helpx.adobe.com/contact.html
+              </a>
+            </div>
+            <p>פתיחת פנייה כללית, תמיכה טכנית, ושאלות על חשבון Creative Cloud.</p>
+          </div>
+
+          <div class="contact-item">
+            <strong>Adobe Partner Program — תוכנית שותפים</strong>
+            <div class="ltr">
+              <a href="https://www.adobe.com/partners.html" target="_blank" rel="noopener noreferrer">
+                https://www.adobe.com/partners.html
+              </a>
+            </div>
+            <p>מסלול מתאים לשיתופי פעולה אסטרטגיים, אינטגרציות ושותפויות תוכן.</p>
+          </div>
+
+          <div class="contact-item">
+            <strong>פרטי יוצר — AnLoMinus (לצד המכתב)</strong>
+            <p>להשלמה במייל / טופס: שם מלא, טלפון, קישור לערוצים, ועוד.</p>
+            <p class="ltr">
+              <!-- החלף לכתובת המייל שלך -->
+              ✉️ Email: quadcosmos@gmail.com
+            </p>
+            <button class="copy-btn" type="button" data-copy="your-email@your-domain.com">
+              📋 העתק כתובת מייל
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Adobe Wins -->
+    <section id="why">
+      <div class="section-card">
+        <h2 class="section-title">🚀 למה זה משתלם לאדובי?</h2>
+        <p class="section-sub">
+          נקודות חיזוק שאפשר להדגיש בשיחה או במייל המשך — להראות את הערך ש־Adobe מקבלת מהחיבור.
+        </p>
+
+        <ul class="key-points">
+          <li><span class="icon">💡</span><span>עשרות יצירות חדשות בכל שבוע — כולן עם Adobe כבסיס עבודה.</span></li>
+          <li><span class="icon">🌍</span><span>קהלים מגוונים: יוצרים, DJs, מעצבים, גיימרים, תלמידים ואנשי חזון.</span></li>
+          <li><span class="icon">📺</span><span>תוכן עשיר ל־YouTube, GitHub Pages, רשתות חברתיות וקבוצות קהילה.</span></li>
+          <li><span class="icon">🎧</span><span>מותג HacKing-DJ ותכני HolyTrap — מרחב מוזיקלי־ויזואלי מלא אנרגיה שמציג את Adobe בקדמת הבמה.</span></li>
+          <li><span class="icon">🧩</span><span>עולמות SparKing, Nesle, SparkCards &amp; Realms — הזדמנות למיתוג Adobe כפלטפורמת־על של יקומי יצירה.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer / Credits -->
+    <footer class="footer" id="footer">
+      <div class="footer-grid">
+        <div>
+          <strong>📌 האשטאגים לשיתוף &amp; פרסום</strong>
+          <p class="hashtags">
+            #Adobe #AdobeCreativeCloud #AnLoMinus #LeonYaakobov #SparKing #HolyTrap #HacKingDJ #DigitalArt #MotionDesign #MusicProducer #GitHubPages #CodePen #CreativePartnership #Sponsorship #IsraelCreator
+          </p>
+
+          <div class="verse">
+            פסוק השראה 🎯<br />
+            <span>
+              "וַיְמַלֵּא אֹתוֹ רוּחַ אֱלֹקִים בְּחָכְמָה בִּתְבוּנָה וּבְדַעַת וּבְכָל מְלָאכָה" (שמות ל"ה)
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <strong>💠 קרדיטים &amp; מקורות מאגרים</strong>
+          <ul class="credits-list">
+            <li>🎨 Adobe Creative Cloud — <span class="ltr"><a href="https://www.adobe.com/" target="_blank" rel="noopener noreferrer">https://www.adobe.com/</a></span></li>
+            <li>🧪 CodePen (לבדיקות חיות) — <span class="ltr"><a href="https://codepen.io/" target="_blank" rel="noopener noreferrer">https://codepen.io/</a></span></li>
+            <li>💻 GitHub Pages (העלאת האתר) — <span class="ltr"><a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">https://pages.github.com/</a></span></li>
+          </ul>
+
+          <div class="rap-block">
+            🎤 פזמון ראפ — Adobe VisionLift (AV)<br />
+            Adobe מרימה לי כנפיים — כל פריים נדלק באש חמה,<br />
+            SparKing שולח ניצוצות — יצירה חוצה כל מערכת סגורה,<br />
+            קוד, לוגו, וידאו, סאונד — הכול נולד בעננת ענק של חלומה,<br />
+            AnLoMinus × Adobe ביחד — כותבים מציאות בקדושה דיגיטלית שזורמה.
+          </div>
+
+          <div class="metrics">
+            🧩 מספר המידות: <strong>10</strong> — תפארת היצירה, איזון בין חזון לביצוע.
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:16px; font-size:0.8rem;">
+        נבנה באהבה על ידי לאון יעקובוב (AnLoMinus) · SparKing VisionLift (AV) · דף מכתב אינטרנטי לחסות Adobe.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for nav buttons
+    document.querySelectorAll(".nav-link").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var target = btn.getAttribute("data-scroll");
+        if (!target) return;
+        var el = document.querySelector(target);
+        if (!el) return;
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    // Copy email helper
+    document.querySelectorAll(".copy-btn").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var value = button.getAttribute("data-copy");
+        if (!value) return;
+        navigator.clipboard
+          .writeText(value)
+          .then(function () {
+            var original = button.textContent;
+            button.textContent = "✅ הועתק!";
+            setTimeout(function () {
+              button.textContent = original;
+            }, 1500);
+          })
+          .catch(function () {
+            alert("לא הצלחתי להעתיק — אנא סמן והעתק ידנית.");
+          });
+      });
+    });
+  </script>
+</body>
+</html>
