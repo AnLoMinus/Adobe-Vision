@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HacKing-DJ Creative Kit — Adobe VisionLift</title>
+  <meta name="description" content="סט מסמכים רשמי לערוץ HacKing-DJ: שיר ראפ באנגלית על Adobe, פרומפטי סטייל ופרומפטים ליצירת תמונות לפרסום החסות." />
+  <style>
+    :root {
+      --bg: #050716;
+      --panel: rgba(10, 14, 36, 0.94);
+      --accent1: #ff3b6a;
+      --accent2: #41e1ff;
+      --accent3: #ffb347;
+      --text: #f5f7ff;
+      --muted: #a6accc;
+      --radius: 18px;
+      --shadow: 0 18px 36px rgba(0, 0, 0, 0.55);
+      --border: rgba(255, 255, 255, 0.2);
+      --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+      --transition: 0.25s ease-out;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255, 80, 180, 0.18) 0, transparent 45%),
+        radial-gradient(circle at 88% 0%, rgba(80, 200, 255, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(255, 180, 40, 0.18) 0, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page { max-width: 1080px; margin: 0 auto; padding: 24px 18px 64px; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+    .nav a { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,0.06); color: var(--text); font-weight: 700; transition: background var(--transition), border-color var(--transition), transform var(--transition); }
+    .nav a:hover { background: linear-gradient(135deg, rgba(255,59,106,0.18), rgba(65,225,255,0.18)); border-color: rgba(255,255,255,0.28); transform: translateY(-1px); }
+
+    .hero { border-radius: 22px; padding: 22px 20px 16px; border: 1px solid rgba(255,255,255,0.24); background: linear-gradient(135deg, rgba(255,59,106,0.18), rgba(65,225,255,0.14)), linear-gradient(135deg, rgba(0,0,0,0.9), rgba(5,10,35,0.94)); box-shadow: var(--shadow); margin-bottom: 18px; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; inset: -40%; opacity: 0.2; background: radial-gradient(circle at 20% 0%, rgba(255,255,255,0.5) 0, transparent 50%), radial-gradient(circle at 80% 100%, rgba(255,255,255,0.3) 0, transparent 55%); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 1; }
+    .hero h1 { margin: 0 0 6px; font-size: clamp(1.8rem, 4vw, 2.3rem); }
+    .hero p { margin: 0 0 8px; color: var(--muted); }
+
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border); color: var(--muted); font-size: 0.92rem; margin-bottom: 8px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 14px 12px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+    .panel h2 { margin: 0 0 6px; font-size: 1.12rem; display: flex; align-items: center; gap: 8px; }
+    .panel p { margin: 0 0 8px; color: var(--muted); }
+
+    .code-block { background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); padding: 12px; white-space: pre-wrap; font-family: "Fira Code", "SFMono-Regular", Consolas, monospace; line-height: 1.6; color: var(--text); }
+
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 4px; }
+    .chip { padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); color: var(--muted); font-size: 0.86rem; }
+
+    .list { margin: 0; padding-right: 18px; color: var(--muted); }
+    .list li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <a href="index.html">חזרה למכתב הראשי</a>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <a href="vision.html">עמוד חזון</a>
+        <a href="media-kit.html">ערכת מדיה</a>
+        <a href="activation-plan.html">תוכנית הפעלה</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="badge">HacKing-DJ · Adobe VisionLift</span>
+        <h1>מסמכי יצירה מוכנים לפרסום ולחסות</h1>
+        <p>שיר ראפ באנגלית עם פאנ׳צ׳ים על כל תוכנת Adobe, חבילת פרומפטי סטייל, ורעיונות לתמונות ממותגות עם שמי — הכל מוכן להעלאה לערוץ HacKing-DJ.</p>
+        <div class="chips">
+          <span class="chip">Rap Script</span>
+          <span class="chip">Copy-Paste Prompts</span>
+          <span class="chip">Visual Assets</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid" style="margin-bottom:14px;">
+      <article class="panel" id="rap">
+        <h2>🎤 Rap Manuscript (≤ 5000 chars)</h2>
+        <p>טקסט באנגלית שמדגיש כל תוכנה של Adobe, עם פאנ׳צ׳ים, קרדיטים לערוץ HacKing-DJ, וזורם בשכבות.</p>
+        <div class="code-block">
+[Intro]
+HacKing-DJ on the deck, got the logos on flash,
+Adobe in the bloodstream, every bar a color splash.
+
+[Verse 1: Visual Forge]
+I paint with Photoshop, liquify a thought in a sec,
+Healing brush the scars, let the gradients intersect.
+Illustrator with the bezier, paths never miss,
+Vectors sharp as sponsorships, curve-kissed bliss.
+InDesign spreads flip like a deck in a rave,
+Master pages stepping like disciples to the wave.
+
+[Verse 2: Motion Craft]
+Premiere on the timeline, cuts hit like snares,
+Multicam synced while the holy trap flares.
+After Effects portals, particles orbit the name,
+Trapcode fireflies spelling Adobe in the flame.
+Animate loops bounce like the crowd on a drop,
+Frame by frame hustle — no stutter, no stop.
+
+[Verse 3: Audio Matrix]
+Audition on the booth, de-ess the venom,
+Noise print silent, let the verse sound heaven.
+Podcast polish, HolyTrap sermon on replay,
+Compressor set gentle so the punch still stay.
+
+[Verse 4: Fast Tracks]
+Adobe Express, quick thumbs for the feed,
+Templates in neon, every reel at warp speed.
+Lightroom balance — split tones midnight gold,
+Camera Raw secrets that the shutter never told.
+Substance paints armor for the 3D clan,
+Textured like a myth from the SparKing plan.
+
+[Bridge]
+From stock to fonts, my arsenal clicks,
+Behance route mapped like a touring mix.
+Cloud sync lightning, assets in the sky,
+HacKing-DJ logo riding every flyby.
+
+[Hook]
+It’s Adobe in the DNA, sponsor my art,
+Every suite in the rhythm, every beat in the chart.
+If you feel the elevation then you already know —
+We print the vision in RGB, let the CMYK glow.
+
+[Outro]
+Tag it Created with Adobe, let the credits roll,
+AnLoMinus on the record, synergy on patrol.
+VisionLift banner with the channel in view,
+From the studio to the cosmos — Adobe, that’s you.
+        </div>
+      </article>
+
+      <article class="panel" id="style-prompts">
+        <h2>🎨 Style Prompt Pack (4 × ≤ 1000 chars)</h2>
+        <p>ארבעה פרומפטים מוכנים להעתקה — כל אחד בסגנון אחר, לג׳אמים של וידאו, טקסט או קריינות.</p>
+        <div class="code-block">
+Cyber Neon Sprint — punchy voiceover:
+"Hyper-energetic narration for HacKing-DJ x Adobe: neon skyline, glitch cuts, BPM 140, namecheck Leon Yaakobov (AnLoMinus), spotlight on Photoshop, Illustrator, Premiere Pro, After Effects. Add witty punchlines about layers, masks, GPU flames. Keep it motivational, club-ready, under 1000 characters."
+
+Lo-Fi Notebook — spoken word:
+"Warm, intimate monologue as if scribbled in a travel notebook. Mention Adobe Express for speed, Lightroom for mood, Audition for soft vinyl crackle. Drop gentle rhymes, coffeehouse vibe, first-person tone, max 1000 characters for quick copy-paste."
+
+Cinematic Trailer — deep voice:
+"Epic trailer prompt: cathedral reverb, ticking clock, the hero is the HacKing-DJ channel wielding Adobe Creative Cloud. Name-drop Substance 3D, InDesign spreads, and Behance showcase. Build rising tension with short sentences and resonant punchlines. Cap at 1000 characters."
+
+Minimal Tech — bullet cadence:
+"Minimalistic bullet flow for captions: 7–9 bullets, each a 6–8 word punchline. Mention Photoshop, Illustrator, Premiere, After Effects, Audition, Adobe Express. Tone: futuristic, confident, ready for sponsorship. Keep total under 1000 characters."
+        </div>
+      </article>
+
+      <article class="panel" id="image-prompts">
+        <h2>🖼️ Image Prompt Bank (sponsor-ready)</h2>
+        <p>פרומפטים ליצירת ויז׳ואלים נוצצים עם השם שלי, מוכנים לפרסום ברשתות.</p>
+        <ul class="list">
+          <li>"Portrait of <strong>Leon Yaakobov (AnLoMinus)</strong> as a DJ in a luminous control room, Adobe logos as holograms, chrome headphones, neon pink and cyan lighting, cinematic depth of field, UHD, Created with Adobe."</li>
+          <li>"HacKing-DJ stage in outer space, massive screen reading ‘Powered by Adobe’, crowd of avatars in glowing masks, particles shaped like the Creative Cloud icon, sharp focus, volumetric lights."</li>
+          <li>"Graphic poster: Adobe software icons orbiting a vinyl record labeled ‘VisionLift’, typography in Hebrew + English, duotone magenta/teal, grain texture, ready for social media sponsorship."</li>
+          <li>"Minimal banner with the name AnLoMinus centered, subtle gradient inspired by Adobe Express, thin white frame, abstract waves hinting at audio levels, export at 4K for wide cover art."</li>
+          <li>"3D card deck flying through a tunnel of light, each card stamped ‘Created with Adobe Tools’, mix of Photoshop collages and Illustrator vectors, motion blur and starfield sparks."</li>
+        </ul>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
